@@ -17,6 +17,8 @@ class ProcessamentoDeImagem{
 
         void leArquivo();
 
+        void 
+
         
 
 

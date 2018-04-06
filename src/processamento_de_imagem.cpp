@@ -4,6 +4,29 @@
 
 using namespace std;
 
+void ProcessamentoDeImagem::leArquivo(){
+    ifstream arquivo;
+    arquivo.open(getPath());
+    if (arquivo.is_open()){
+        while(arquivo, ){
+
+        }
+    }
+
+
+    arquivo.close();
+     
+}
+
+void ProcessamentoDeImagem::setPath(string caminho){
+    this->caminho = caminho;
+}
+string ProcessamentoDeImagem::getPath(){
+    return caminho;
+}
+
+
+
 //ofstream -> saida sistema e entrada no arquivo
 /*  ofstream arquivo;
     arquivo.open("caminho_do_arquivo.pgm");
