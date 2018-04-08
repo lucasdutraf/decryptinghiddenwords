@@ -8,7 +8,7 @@ void ProcessamentoDeImagem::leArquivo(){
     ifstream arquivo;
     arquivo.open(getPath());
     if (arquivo.is_open()){
-        while(arquivo, ){
+        while(arquivo,){
 
         }
     }
