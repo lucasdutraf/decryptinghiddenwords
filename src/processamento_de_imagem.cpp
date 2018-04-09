@@ -1,31 +1,42 @@
 #include "processamento_de_imagem.hpp"
 #include <iostream>
 #include <fstream>
+#include <istream>
+
 
 using namespace std;
 
-void ProcessamentoDeImagem::leArquivo(){
-    ifstream arquivo;
-    arquivo.open(getPath());
-    if (arquivo.is_open()){
-        while(arquivo,){
+void ProcessamentoDeImagem::leitorImg(string ArmazenamentoImg){
+    this->ArmazenamentoImg = ArmazenamentoImg;
+    ifstream ImageIn;
+    ImageIn.open(getPathIn());
+    if (ImageIn.is_open()){
+        while(get(ImageIn, ArmazenamentoImg){
 
         }
     }
+    else{
+        cout << "Não foi possível abrir o arquivo" << endl;
+    }
 
 
-    arquivo.close();
+    ImageIn.close();
      
 }
 
-void ProcessamentoDeImagem::setPath(string caminho){
-    this->caminho = caminho;
+void ProcessamentoDeImagem::setPathIn(string caminhoEntrada){
+    this->caminhoEntrada = caminhoEntrada;
 }
-string ProcessamentoDeImagem::getPath(){
-    return caminho;
+string ProcessamentoDeImagem::getPathIn(){
+    return caminhoEntrada;
 }
 
-
+void ProcessamentoDeImagem::setPathOut(string caminhoSaida){
+    this->caminhoSaida = caminhoSaida;
+}
+string ProcessamentoDeImagem::getPathOut(){
+    return caminhoSaida;
+}
 
 //ofstream -> saida sistema e entrada no arquivo
 /*  ofstream arquivo;

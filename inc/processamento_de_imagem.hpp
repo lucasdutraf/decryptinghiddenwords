@@ -9,17 +9,21 @@ class ProcessamentoDeImagem{
         int largura, altura;
         char id;
         int ValorMaximo;
-        string caminho;
+        string caminhoEntrada;
+        string ArmazenamentoImg;
+        string caminhoSaida;
     
     public:
-        void setPath(string caminho);
-        string getPath();
+        void setPathIn(string caminhoEntrada);
+        string getPathIn();
 
-        void leArquivo();
+        void setPathOut(string caminhoSaida);
+        string getPathOut();
 
-        void 
+        void setArmazenamento(string ArmazenamentoImg);
+        string getArmazenamento();
 
-        
+        void leitorImg(string ArmazenamentoImg);
 
 
 };
