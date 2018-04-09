@@ -6,6 +6,21 @@
 
 using namespace std;
 
+
+void ProcessamentoDeImagem::setPathIn(string caminhoEntrada){
+    this->caminhoEntrada = caminhoEntrada;
+}
+string ProcessamentoDeImagem::getPathIn(){
+    return caminhoEntrada;
+}
+
+void ProcessamentoDeImagem::setPathOut(string caminhoSaida){
+    this->caminhoSaida = caminhoSaida;
+}
+string ProcessamentoDeImagem::getPathOut(){
+    return caminhoSaida;
+}
+
 void ProcessamentoDeImagem::leitorImg(string ArmazenamentoImg){
     this->ArmazenamentoImg = ArmazenamentoImg;
     ifstream ImageIn;
@@ -22,20 +37,6 @@ void ProcessamentoDeImagem::leitorImg(string ArmazenamentoImg){
 
     ImageIn.close();
      
-}
-
-void ProcessamentoDeImagem::setPathIn(string caminhoEntrada){
-    this->caminhoEntrada = caminhoEntrada;
-}
-string ProcessamentoDeImagem::getPathIn(){
-    return caminhoEntrada;
-}
-
-void ProcessamentoDeImagem::setPathOut(string caminhoSaida){
-    this->caminhoSaida = caminhoSaida;
-}
-string ProcessamentoDeImagem::getPathOut(){
-    return caminhoSaida;
 }
 
 //ofstream -> saida sistema e entrada no arquivo
