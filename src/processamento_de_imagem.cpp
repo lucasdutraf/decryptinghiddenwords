@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <istream>
-
+#include <vector>
 
 using namespace std;
 
@@ -26,8 +26,10 @@ void ProcessamentoDeImagem::leitorImg(string ArmazenamentoImg){
     ifstream ImageIn;
     ImageIn.open(getPathIn());
     if (ImageIn.is_open()){
-        while(get(ImageIn, ArmazenamentoImg){
-
+        vector<char> imgVector;
+        char conteudo;
+        while(ImageIn.get(conteudo)){
+            imgVector.push_back(conteudo);
         }
     }
     else{
