@@ -1,8 +1,9 @@
-#include "processamento_de_imagem.hpp"
+#include "inc/processamento_de_imagem.hpp"
 #include <iostream>
 #include <fstream>
 #include <istream>
 #include <vector>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -31,14 +32,20 @@ void ProcessamentoDeImagem::leitorImg(string ArmazenamentoImg){
         while(ImageIn.get(conteudo)){
             imgVector.push_back(conteudo);
         }
+
     }
     else{
         cout << "Não foi possível abrir o arquivo" << endl;
     }
-
-
+    int imgVector_int = atoi(imgVector);
     ImageIn.close();
-     
+    
+    ofstream ImageOut;
+    ImageOut.open(getPathOut());
+    ImageOut << imgVector_int;
+    ImageOut.close();
+
+
 }
 
 //ofstream -> saida sistema e entrada no arquivo

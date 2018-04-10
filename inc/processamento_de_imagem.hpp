@@ -2,6 +2,11 @@
 #define PROCESSAMENTO_DE_IMAGEM_HPP
 #include <fstream>
 #include <string>
+#include <vector>
+#include <stdlib.h>
+#include <istream>
+
+
 using namespace std;
 
 class ProcessamentoDeImagem{
