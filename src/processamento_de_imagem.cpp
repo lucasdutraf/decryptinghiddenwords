@@ -32,20 +32,19 @@ void ProcessamentoDeImagem::leitorImg(string ArmazenamentoImg){
         while(ImageIn.get(conteudo)){
             imgVector.push_back(conteudo);
         }
-
     }
     else{
         cout << "Não foi possível abrir o arquivo" << endl;
     }
-    int imgVector_int = atoi(imgVector);
+    //int imgVector_int = atoi(imgVector);
     ImageIn.close();
     
     ofstream ImageOut;
     ImageOut.open(getPathOut());
-    ImageOut << imgVector_int;
+        for (int contador = 0; contador <= imgVector.size(); contador++){
+        ImageOut << imgVector[i];
+    }
     ImageOut.close();
-
-
 }
 
 //ofstream -> saida sistema e entrada no arquivo
