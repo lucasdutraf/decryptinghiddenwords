@@ -11,14 +11,15 @@ using namespace std;
 
 class ProcessamentoDeImagem{
     private:
-        int largura, altura;
         char id;
-        int ValorMaximo;
         string caminhoEntrada;
         string ArmazenamentoImg;
         string caminhoSaida;
     
     public:
+    
+        ProcessamentoDeImagem();
+    
         void setPathIn(string caminhoEntrada);
         string getPathIn();
 

@@ -1,4 +1,4 @@
-#include "inc/processamento_de_imagem.hpp"
+#include "./inc/processamento_de_imagem.hpp"
 #include <iostream>
 #include <fstream>
 #include <istream>
@@ -26,10 +26,15 @@ void ProcessamentoDeImagem::leitorImg(string ArmazenamentoImg){
     //this->ArmazenamentoImg = ArmazenamentoImg;
     ifstream ImageIn;
     ImageIn.open(getPathIn());
+    string id, CripStart, CripLenght, Cipher;
+    char comentario;
     getline(ImageIn, id, '\n');
     getline(ImageIn, CripStart, ' ');
     getline(ImageIn, CripLenght, ' ');
     getline(ImageIn, Cipher, '\n');
+
+    int CripStart_int = stoi (CripStart);
+    int CripLenght_int = stoi (CripLenght);
 
     vector<char> imgVector;
     char conteudo;
@@ -47,7 +52,7 @@ void ProcessamentoDeImagem::leitorImg(string ArmazenamentoImg){
     ofstream ImageOut;
     ImageOut.open(getPathOut());
         for (int contador = 0; contador <= imgVector.size(); contador++){
-        ImageOut << imgVector[i];
+            ImageOut << imgVector[contador];
     }
     ImageOut.close();
 }
