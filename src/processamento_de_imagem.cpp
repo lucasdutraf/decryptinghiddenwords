@@ -23,13 +23,18 @@ string ProcessamentoDeImagem::getPathOut(){
 }
 
 void ProcessamentoDeImagem::leitorImg(string ArmazenamentoImg){
-    this->ArmazenamentoImg = ArmazenamentoImg;
+    //this->ArmazenamentoImg = ArmazenamentoImg;
     ifstream ImageIn;
     ImageIn.open(getPathIn());
+    getline(ImageIn, id, '\n');
+    getline(ImageIn, CripStart, ' ');
+    getline(ImageIn, CripLenght, ' ');
+    getline(ImageIn, Cipher, '\n');
+
+    vector<char> imgVector;
+    char conteudo;
     if (ImageIn.is_open()){
-        vector<char> imgVector;
-        char conteudo;
-        while(ImageIn.get(conteudo)){
+        while(!ImageIn.eof())){
             imgVector.push_back(conteudo);
         }
     }
