@@ -19,6 +19,7 @@ class ProcessamentoDeImagem{
     public:
     
         ProcessamentoDeImagem();
+        ~ProcessamentoDeImagem();
     
         void setPathIn(string caminhoEntrada);
         string getPathIn();

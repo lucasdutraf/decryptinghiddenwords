@@ -1,4 +1,4 @@
-#include "./inc/processamento_de_imagem.hpp"
+#include "processamento_de_imagem.hpp"
 #include <iostream>
 #include <fstream>
 #include <istream>
@@ -20,6 +20,7 @@ void ProcessamentoDeImagem::leitorImg(){
     //this->ArmazenamentoImg = ArmazenamentoImg;
     string id, CripStart, CripLenght, Cipher, LarguraImg, AlturaImg, TonsImg;
     char comentario;
+    int ContadorCrip;
 
     ifstream ImageIn;
     ImageIn.open(getPathIn());
@@ -39,28 +40,27 @@ void ProcessamentoDeImagem::leitorImg(){
 
     vector<char> imgVector;
 
-    imgVector << id << endl;
-    imgVector << CripStart << " " << CripLenght << " " << Cipher << endl;
-    imgVector << LarguraImg << " " << AlturaImg << endl;
-    imgVector << TonsImg << endl;
-
     char conteudo;
+
     if (ImageIn.is_open()){
         while(!ImageIn.eof()){
+            ImageIn.get(conteudo);
             imgVector.push_back(conteudo);
         }
     }
     else{
         cout << "Não foi possível abrir o arquivo" << endl;
     }
-    ImageIn.close();
-    
-    ofstream ImageOut;
-    ImageOut.open(getPathOut());
-        for (int contador = 0; contador <= imgVector.size(); contador++){
-            ImageOut << imgVector[contador];
+
+    ofstream Crip;
+    Crip.open("criptografia.txt");
+    for(contador = CripStart_int; contador <= CripStart_int + CripLenght_int; contador++){
+          Crip << imgVector[contador];
     }
-    ImageOut.close();
+
+    
+
+    ImageIn.close();
 }
 
 //ofstream -> saida sistema e entrada no arquivo
