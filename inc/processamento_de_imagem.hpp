@@ -23,12 +23,6 @@ class ProcessamentoDeImagem{
         void setPathIn(string caminhoEntrada);
         string getPathIn();
 
-        void setPathOut(string caminhoSaida);
-        string getPathOut();
-
-        void setArmazenamento(string ArmazenamentoImg);
-        string getArmazenamento();
-
         void leitorImg(string ArmazenamentoImg);
 
 
