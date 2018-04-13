@@ -15,38 +15,44 @@ string ProcessamentoDeImagem::getPathIn(){
     return caminhoEntrada;
 }
 
-void ProcessamentoDeImagem::setPathOut(string caminhoSaida){
-    this->caminhoSaida = caminhoSaida;
-}
-string ProcessamentoDeImagem::getPathOut(){
-    return caminhoSaida;
-}
 
-void ProcessamentoDeImagem::leitorImg(string ArmazenamentoImg){
+void ProcessamentoDeImagem::leitorImg(){
     //this->ArmazenamentoImg = ArmazenamentoImg;
+    string id, CripStart, CripLenght, Cipher, LarguraImg, AlturaImg, TonsImg;
+    char comentario;
+
     ifstream ImageIn;
     ImageIn.open(getPathIn());
-    string id, CripStart, CripLenght, Cipher;
-    char comentario;
+
     getline(ImageIn, id, '\n');
+    ImageIn.get(comentario);
     getline(ImageIn, CripStart, ' ');
     getline(ImageIn, CripLenght, ' ');
     getline(ImageIn, Cipher, '\n');
+    getline(ImageIn, LarguraImg, ' ');
+    getline(ImageIn, AlturaImg, '\n');
+    getline(ImageIn, TonsImg, '\n');
 
     int CripStart_int = stoi (CripStart);
     int CripLenght_int = stoi (CripLenght);
+    int Cipher_int = stoi(Cipher);
 
     vector<char> imgVector;
+
+    imgVector << id << endl;
+    imgVector << CripStart << " " << CripLenght << " " << Cipher << endl;
+    imgVector << LarguraImg << " " << AlturaImg << endl;
+    imgVector << TonsImg << endl;
+
     char conteudo;
     if (ImageIn.is_open()){
-        while(!ImageIn.eof())){
+        while(!ImageIn.eof()){
             imgVector.push_back(conteudo);
         }
     }
     else{
         cout << "Não foi possível abrir o arquivo" << endl;
     }
-    //int imgVector_int = atoi(imgVector);
     ImageIn.close();
     
     ofstream ImageOut;
