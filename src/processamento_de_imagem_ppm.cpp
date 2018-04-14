@@ -1,3 +1,4 @@
+#include "processamento_de_imagem_ppm.hpp"
 #include "processamento_de_imagem.hpp"
 #include <iostream>
 #include <fstream>
