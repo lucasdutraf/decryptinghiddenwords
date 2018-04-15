@@ -6,6 +6,7 @@
 #include <vector>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string>
 
 using namespace std;
 
