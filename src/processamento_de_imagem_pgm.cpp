@@ -11,11 +11,21 @@
 using namespace std;
 
 
+ProcessamentoDeImagemPGM::ProcessamentoDeImagemPGM(setPathIn(string caminhoEntrada)){
+    caminhoEntrada = caminhoEntrada;
+}
+ProcessamentoDeImagemPGM::~ProcessamentoDeImagemPGM(){
+    cout << "Término da classe Processamento de imagem PGM" << endl;
+}
+
 void ProcessamentoDeImagemPGM::leitorImg(){
     //this->ArmazenamentoImg = ArmazenamentoImg;
     string id, CripStart, CripLenght, Cipher, LarguraImg, AlturaImg, TonsImg;
     char comentario;
     int ContadorCrip;
+    vector<char> imgVector;
+    char conteudo;
+
 
     ifstream ImageIn;
     ImageIn.open(getPathIn());
@@ -33,39 +43,48 @@ void ProcessamentoDeImagemPGM::leitorImg(){
     int CripLenght_int = stoi (CripLenght);
     int Cipher_int = stoi(Cipher);
 
-    vector<char> imgVector;
-
-    char conteudo;
-
     if (ImageIn.is_open()){
+
         while(!ImageIn.eof()){
             ImageIn.get(conteudo);
             imgVector.push_back(conteudo);
         }
+
+        ofstream Crip;
+        Crip.open("criptografia.txt", ios:out);
+
+        for(contador = CripStart_int; contador <= CripStart_int + CripLenght_int; contador++){
+            Crip << imgVector[contador];
+        }
     }
+
     else{
         cout << "Não foi possível abrir o arquivo" << endl;
     }
 
-    fstream Crip;
-    Crip.open("criptografia.txt", ios:out);
-    for(contador = CripStart_int; contador <= CripStart_int + CripLenght_int; contador++){
-          Crip << imgVector[contador];
-    }
+
     Crip.close();
-    
+    ImageIn.close();
+}
+
+void ProcessamentoDeImagemPGM::UncripMsg(){
+    ifstream Crip;
     Crip.open("criptografia.txt", ios:in);
     if(Crip.is_open()){
 
-
+        ofstream DesCrip;
+        DesCrip.open("mensagem.txt");
+        if(DesCrip.is_open()){
+            
+        }
+        else{
+            cout << "Falha no arquivo de abertura da mensagem não criptografada" << endl;
+        }
     }
+
     else{
         cout << "Arquivo de criptografia inacessível" << endl;
     }
-    Crip.close();
-    
-
-    ImageIn.close();
 }
 
 //ofstream -> saida sistema e entrada no arquivo

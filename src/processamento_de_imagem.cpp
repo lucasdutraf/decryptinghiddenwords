@@ -5,12 +5,19 @@
 #include <vector>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string>
+
 
 using namespace std;
 
+ProcessamentoDeImagem::ProcessamentoDeImagem(){
+    string caminhoEntrada = " ";
+}
+ProcessamentoDeImagem::~ProcessamentoDeImagem(){
+}
 
 void ProcessamentoDeImagemPGM::setPathIn(string caminhoEntrada){
-    this->caminhoEntrada = caminhoEntrada;
+    cin >> this->caminhoEntrada = caminhoEntrada;
 }
 string ProcessamentoDeImagemPGM::getPathIn(){
     return caminhoEntrada;

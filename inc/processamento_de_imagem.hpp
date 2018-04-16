@@ -12,7 +12,6 @@ using namespace std;
 
 class ProcessamentoDeImagem{
     private:
-        char id;
         string caminhoEntrada;
         string ArmazenamentoImg;
         string caminhoSaida;
@@ -26,6 +25,8 @@ class ProcessamentoDeImagem{
         string getPathIn();
 
         void leitorImg(string ArmazenamentoImg);
+
+        void UncripMsg();
 
 
 };

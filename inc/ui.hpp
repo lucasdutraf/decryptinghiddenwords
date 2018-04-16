@@ -2,10 +2,22 @@
 #define UI_HPP
 #include <fstream>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 class UI {
-    void Interface();
+    
+    public:
+        UI();
+        ~UI();
+
+        void InterfaceInicial();
+
+        void PedeTipoDeImagem();
+
+        void MostraCriptografia();
+
+        void Despedida();
 };
 #endif

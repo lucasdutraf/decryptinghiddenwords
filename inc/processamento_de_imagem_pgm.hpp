@@ -14,13 +14,16 @@ class ProcessamentoDeImagemPGM : public ProcessamentoDeImagem{
     public:
     
         ProcessamentoDeImagemPGM();
-        ProcessamentoDeImagemPGM(getPathIn());
+        ProcessamentoDeImagemPGM(setPathIn(string caminhoEntrada));
         ~ProcessamentoDeImagemPGM();
     
         void setPathIn(string caminhoEntrada);
         string getPathIn();
 
         void leitorImg(string ArmazenamentoImg);
+
+        void UncripMsg();
+
 
 
 };
