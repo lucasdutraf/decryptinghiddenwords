@@ -39,9 +39,11 @@ void ProcessamentoDeImagemPGM::leitorImg(){
     getline(ImageIn, AlturaImg, '\n');
     getline(ImageIn, TonsImg, '\n');
 
-    int CripStart_int = stoi (CripStart);
-    int CripLenght_int = stoi (CripLenght);
-    int Cipher_int = stoi(Cipher);
+
+    int CripStart_int = atoi(CripStart.c_str());
+    int CripLenght_int = atoi(CripLenght.c_str());
+    int Cipher_int = atoi(Cipher.c_str());
+
 
     if (ImageIn.is_open()){
 
