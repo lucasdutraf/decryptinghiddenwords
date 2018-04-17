@@ -21,7 +21,7 @@ ProcessamentoDeImagemPGM::~ProcessamentoDeImagemPGM(){
 void ProcessamentoDeImagemPGM::leitorImg(){
     //this->ArmazenamentoImg = ArmazenamentoImg;
     string id, CripStart, CripLenght, Cipher, LarguraImg, AlturaImg, TonsImg;
-    char comentario;
+    char comentario, letras_criptografadas;
     int ContadorCrip;
     vector<char> imgVector;
     char conteudo;
@@ -75,7 +75,10 @@ void ProcessamentoDeImagemPGM::UncripMsg(){
         ofstream DesCrip;
         DesCrip.open("mensagem.txt");
         if(DesCrip.is_open()){
-            
+            while(!Descrip.eof()){
+                Descrip.get(letras_criptografadas);
+                
+            }
         }
         else{
             cout << "Falha no arquivo de abertura da mensagem não criptografada" << endl;

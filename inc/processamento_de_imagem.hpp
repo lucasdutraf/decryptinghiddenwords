@@ -26,8 +26,5 @@ class ProcessamentoDeImagem{
 
         void leitorImg(string ArmazenamentoImg);
 
-        void UncripMsg();
-
-
 };
 #endif
