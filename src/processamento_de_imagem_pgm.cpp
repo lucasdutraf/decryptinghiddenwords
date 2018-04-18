@@ -20,7 +20,7 @@ ProcessamentoDeImagemPGM::~ProcessamentoDeImagemPGM(){
 
 void ProcessamentoDeImagemPGM::leitorImg(){
     //this->ArmazenamentoImg = ArmazenamentoImg;
-    string id, CripStart, CripLenght, Cipher, LarguraImg, AlturaImg, TonsImg;
+    
     char comentario, letras_criptografadas;
     int ContadorCrip;
     vector<char> imgVector;
@@ -32,7 +32,7 @@ void ProcessamentoDeImagemPGM::leitorImg(){
 
     getline(ImageIn, id, '\n');
     ImageIn.get(comentario);
-    getline(ImageIn, CripStart, ' ');
+    getline(ImageIn, getCripStart, ' ');
     getline(ImageIn, CripLenght, ' ');
     getline(ImageIn, Cipher, '\n');
     getline(ImageIn, LarguraImg, ' ');
@@ -71,25 +71,53 @@ void ProcessamentoDeImagemPGM::leitorImg(){
 
 void ProcessamentoDeImagemPGM::UncripMsg(){
     ifstream Crip;
+    int contador_crip;
+    int WithoutCrip = 0;
+    char letras_criptografadas;
+
     Crip.open("criptografia.txt", ios:in);
     if(Crip.is_open()){
 
         ofstream DesCrip;
         DesCrip.open("mensagem.txt");
         if(DesCrip.is_open()){
-            while(!Descrip.eof()){
+            while(contador_crip < CripLenght){
                 Descrip.get(letras_criptografadas);
-                
+
+                if(letras_criptografadas == '.' || letras_criptografadas == '-' || letras_criptografadas == ' ' ){
+                    WithoutCrip = (int) letras_criptografadas;
+                }
+                else{
+                    if(is_lower(letras_criptografadas)){
+                        if(((int)letras_criptografadas - Cipher_int) < 97){
+                            WithoutCrip = ((int)letras_criptografadas - Cipher_int ) + 26;
+                        }
+                        else {
+                            WithoutCrip = (int)letras_criptografadas - Cipher_int;
+                        }
+                    }
+                    else{
+                        if(((int)letras_criptografadas - Cipher_int) < 65){
+                            WithoutCrip = ((int)letras_criptografadas - Cipher_int) + 26;
+                        }
+                        else {
+                            WithoutCrip = (int)letras_criptografadas - Cipher_int;
+                        }
+                    }
+                }
+                cout << (char)WithoutCrip;
+                //WithoutCrip = 0;
+                contador_crip++;
             }
         }
         else{
             cout << "Falha no arquivo de abertura da mensagem não criptografada" << endl;
         }
     }
-
     else{
         cout << "Arquivo de criptografia inacessível" << endl;
     }
+    Crip.close();
 }
 
 //ofstream -> saida sistema e entrada no arquivo

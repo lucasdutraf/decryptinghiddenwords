@@ -16,15 +16,50 @@ class ProcessamentoDeImagem{
         string ArmazenamentoImg;
         string caminhoSaida;
     
+    protected:
+
+        string id, CripStart, CripLenght;
+        string Cipher, LarguraImg, AlturaImg, TonsImg;
+    
     public:
     
+        //Contrutores e destrutores ------------------------------------------------
+
         ProcessamentoDeImagem();
         ~ProcessamentoDeImagem();
+
+        // Getters e Setters -------------------------------------------------------
+
+        void setId(string id);
+        string getId();
+
+        void setCripStart(string CripStart);
+        string getCripStart();
+
+        void setCripLenght(string CripLenght);
+        string getCripLenght();
+
+        void setCipher(string Cipher);
+        string getCipher();
+
+        void setLarguraImg(string LarguraImg);
+        string getLarguraImg();
+
+        void setAlturaImg(string AlturaImg);
+        string getAlturaImg();
+
+        void setTonsImg(string TonsImg);
+        string getTonsImg();
     
         void setPathIn(string caminhoEntrada);
         string getPathIn();
 
-        void leitorImg(string ArmazenamentoImg);
+        // Outras funções -----------------------------------------------------------------------
+
+        void leitorImg();
+
+        void UncripMsg();
+
 
 };
 #endif
