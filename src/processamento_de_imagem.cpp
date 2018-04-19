@@ -70,7 +70,7 @@ string ProcessamentoDeImagem::getTonsImg();{
 }
 
 void ProcessamentoDeImagemPGM::setPathIn(string caminhoEntrada){
-    cin >> this->caminhoEntrada = caminhoEntrada;
+    this->caminhoEntrada = caminhoEntrada;
 }
 string ProcessamentoDeImagemPGM::getPathIn(){
     return caminhoEntrada;

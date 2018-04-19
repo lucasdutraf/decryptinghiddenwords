@@ -13,8 +13,6 @@ using namespace std;
 class ProcessamentoDeImagem{
     private:
         string caminhoEntrada;
-        string ArmazenamentoImg;
-        string caminhoSaida;
     
     protected:
 

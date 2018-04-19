@@ -10,7 +10,10 @@
 
 using namespace std;
 
-
+ProcessamentoDeImagemPGM::ProcessamentoDeImagemPGM(){
+    setPathIn(" ");
+    
+}
 ProcessamentoDeImagemPGM::ProcessamentoDeImagemPGM(setPathIn(string caminhoEntrada)){
     caminhoEntrada = caminhoEntrada;
 }
@@ -85,7 +88,7 @@ void ProcessamentoDeImagemPGM::UncripMsg(){
                 Descrip.get(letras_criptografadas);
 
                 if(letras_criptografadas == '.' || letras_criptografadas == '-' || letras_criptografadas == ' ' ){
-                    WithoutCrip = (int) letras_criptografadas;
+                    WithoutCrip = (int)letras_criptografadas;
                 }
                 else{
                     if(is_lower(letras_criptografadas)){
@@ -106,7 +109,7 @@ void ProcessamentoDeImagemPGM::UncripMsg(){
                     }
                 }
                 cout << (char)WithoutCrip;
-                //WithoutCrip = 0;
+                WithoutCrip = 0;
                 contador_crip++;
             }
         }

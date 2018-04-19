@@ -6,27 +6,12 @@
 
 int main (){
 
-    int escolha;
-    UI * Interface = new UI();
-    Interface->InterfaceInicial();
-    Interface->PedeTipoDeImagem();
+    ProcessamentoDeImagemPGM process1;
+    string Path;
+    cin >> Path;
+    process1.setPathIn(Path);
+    process1.leitorImg();
+    process1.UncripMsg();
 
-    cin >> escolha;
-    if(escolha == 1){
-
-    }
-    else if (escolha == 2){
-
-    }
-    else{
-        cout << "Digite somente 1 ou 2 " << endl;
-    }
-
-    Interface->MostraCriptografia();
-    Interface->Despedida();
-
-
-
-    delete Interface;
     return 0;
 }
