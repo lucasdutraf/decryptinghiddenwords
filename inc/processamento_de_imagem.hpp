@@ -10,7 +10,7 @@
 
 using namespace std;
 
-class ProcessamentoDeImagem{
+class ProcessamentoDeImagem {
     private:
         string caminhoEntrada;
     

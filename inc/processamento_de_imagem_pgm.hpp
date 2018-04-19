@@ -10,15 +10,11 @@
 
 using namespace std;
 
-class ProcessamentoDeImagemPGM : public ProcessamentoDeImagem{    
+class ProcessamentoDeImagemPGM : public ProcessamentoDeImagem {    
     public:
     
         ProcessamentoDeImagemPGM();
-        ProcessamentoDeImagemPGM(setPathIn(string caminhoEntrada));
         ~ProcessamentoDeImagemPGM();
-
-        void setPathIn(string caminhoEntrada);
-        string getPathIn();
 
         void leitorImg();
 
