@@ -79,7 +79,7 @@ void ProcessamentoDeImagemPGM::UncripMsg(){
         DesCrip.open("mensagem.txt");
         if(DesCrip.is_open()){
             while(contador_crip < getCripLenghtInt()){
-                DesCrip.get(letras_criptografadas);
+                Crip.get(letras_criptografadas);
 
                 if(letras_criptografadas == '.' || letras_criptografadas == '-' || letras_criptografadas == ' ' ){
                     WithoutCrip = (int)letras_criptografadas;
@@ -115,6 +115,7 @@ void ProcessamentoDeImagemPGM::UncripMsg(){
         cout << "Arquivo de criptografia inacessível" << endl;
     }
     Crip.close();
+    DesCrip.close();
 }
 
 //ofstream -> saida sistema e entrada no arquivo
