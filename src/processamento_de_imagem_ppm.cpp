@@ -10,13 +10,13 @@
 using namespace std;
 
 
-/*void ProcessamentoDeImagemPGM::setPathIn(string caminhoEntrada){
+void ProcessamentoDeImagemPPM::setPathIn(string caminhoEntrada){
     this->caminhoEntrada = caminhoEntrada;
 }
-string ProcessamentoDeImagemPGM::getPathIn(){
+string ProcessamentoDeImagemPPM::getPathIn(){
     return caminhoEntrada;
 }
 
 
-void ProcessamentoDeImagemPGM::leitorImg(){
+void ProcessamentoDeImagemPPM::leitorImg(){
 }
