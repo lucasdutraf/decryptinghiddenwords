@@ -1,4 +1,4 @@
-#include "inc/ui.hpp"
+#include "ui.hpp"
 #include <iostream>
 #include <fstream>
 
