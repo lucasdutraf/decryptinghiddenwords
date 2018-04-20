@@ -106,6 +106,8 @@ void ProcessamentoDeImagemPGM::UncripMsg(){
                 WithoutCrip = 0;
                 contador_crip++;
             }
+        DesCrip.close();
+
         }
         else{
             cout << "Falha no arquivo de abertura da mensagem não criptografada" << endl;
@@ -115,7 +117,6 @@ void ProcessamentoDeImagemPGM::UncripMsg(){
         cout << "Arquivo de criptografia inacessível" << endl;
     }
     Crip.close();
-    DesCrip.close();
 }
 
 //ofstream -> saida sistema e entrada no arquivo
