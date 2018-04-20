@@ -20,8 +20,7 @@ ProcessamentoDeImagemPGM::~ProcessamentoDeImagemPGM(){
 void ProcessamentoDeImagemPGM::leitorImg(){
     //this->ArmazenamentoImg = ArmazenamentoImg;
     
-    char comentario, letras_criptografadas;
-    int ContadorCrip;
+    char comentario;
     int contador;
     vector<char> imgVector;
     char conteudo;
@@ -80,13 +79,13 @@ void ProcessamentoDeImagemPGM::UncripMsg(){
         DesCrip.open("mensagem.txt");
         if(DesCrip.is_open()){
             while(contador_crip < getCripLenghtInt()){
-                Descrip.get(letras_criptografadas);
+                DesCrip.get(letras_criptografadas);
 
                 if(letras_criptografadas == '.' || letras_criptografadas == '-' || letras_criptografadas == ' ' ){
                     WithoutCrip = (int)letras_criptografadas;
                 }
                 else{
-                    if(is_lower(letras_criptografadas)){
+                    if(islower(letras_criptografadas)){
                         if(((int)letras_criptografadas - getCipherInt()) < 97){
                             WithoutCrip = ((int)letras_criptografadas - getCipherInt() ) + 26;
                         }

@@ -16,6 +16,8 @@ class UI {
 
         void PedeTipoDeImagem();
 
+        void RecebeImagem();
+
         void MostraCriptografia();
 
         void Despedida();

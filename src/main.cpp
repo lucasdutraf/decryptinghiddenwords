@@ -7,7 +7,9 @@
 int main (){
 
     ProcessamentoDeImagemPGM process1;
+    UI inter;
     string Path;
+    inter.RecebeImagem();
     cin >> Path;
     process1.setPathIn(Path);
     process1.leitorImg();

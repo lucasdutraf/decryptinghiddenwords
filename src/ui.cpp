@@ -18,6 +18,10 @@ void UI::PedeTipoDeImagem(){
     cout << " Digite 1 para .pgm " << "ou" << " digite 2 para .ppm" << endl;
 }
 
+void UI::RecebeImagem(){
+    cout << "Digite o caminho da sua imagem, desde a raíz" << endl;
+}
+
 void UI::MostraCriptografia(){
     cout << "A mensagem escondida na sua imagem é :";
 }
