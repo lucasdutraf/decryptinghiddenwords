@@ -4,7 +4,7 @@
 #include "ui.hpp"
 #include <iostream>
 
-int main (){
+int main (int argc, char ** argv){
 
     ProcessamentoDeImagemPGM process1;
     UI inter;
