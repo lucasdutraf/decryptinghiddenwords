@@ -1,5 +1,6 @@
 #ifndef PROCESSAMENTO_DE_IMAGEM_PPM_HPP
 #define PROCESSAMENTO_DE_IMAGEM_PPM_HPP
+#include "processamento_de_imagem.hpp"
 #include <fstream>
 #include <string>
 #include <vector>
