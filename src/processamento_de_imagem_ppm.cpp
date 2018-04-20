@@ -10,7 +10,7 @@
 using namespace std;
 
 
-void ProcessamentoDeImagemPPM::setPathIn(string caminhoEntrada){
+/*void ProcessamentoDeImagemPPM::setPathIn(string caminhoEntrada){
     this->caminhoEntrada = caminhoEntrada;
 }
 string ProcessamentoDeImagemPPM::getPathIn(){
@@ -19,4 +19,4 @@ string ProcessamentoDeImagemPPM::getPathIn(){
 
 
 void ProcessamentoDeImagemPPM::leitorImg(){
-}
+}*/
