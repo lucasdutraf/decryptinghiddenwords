@@ -40,9 +40,9 @@ void ProcessamentoDeImagemPGM::leitorImg(){
     getline(ImageIn, TonsImg, '\n');
 
 
-    int CripStart_int = atoi(CripStart.c_str());
+    /*int CripStart_int = atoi(CripStart.c_str());
     int CripLenght_int = atoi(CripLenght.c_str());
-    int Cipher_int = atoi(Cipher.c_str());
+    int Cipher_int = atoi(Cipher.c_str());*/
 
 
     if (ImageIn.is_open()){
@@ -55,7 +55,7 @@ void ProcessamentoDeImagemPGM::leitorImg(){
         ofstream Crip;
         Crip.open("criptografia.txt", ios::out);
 
-        for(contador = CripStart_int; contador <= CripStart_int + CripLenght_int; contador++){
+        for(contador = getCripStartInt(); contador <= getCripStartInt() + getCripLenghtInt(); contador++){
             Crip << imgVector[contador];
         }
     }
@@ -79,7 +79,7 @@ void ProcessamentoDeImagemPGM::UncripMsg(){
         ofstream DesCrip;
         DesCrip.open("mensagem.txt");
         if(DesCrip.is_open()){
-            while(contador_crip < CripLenght){
+            while(contador_crip < getCripLenghtInt()){
                 Descrip.get(letras_criptografadas);
 
                 if(letras_criptografadas == '.' || letras_criptografadas == '-' || letras_criptografadas == ' ' ){
@@ -87,19 +87,19 @@ void ProcessamentoDeImagemPGM::UncripMsg(){
                 }
                 else{
                     if(is_lower(letras_criptografadas)){
-                        if(((int)letras_criptografadas - Cipher_int) < 97){
-                            WithoutCrip = ((int)letras_criptografadas - Cipher_int ) + 26;
+                        if(((int)letras_criptografadas - getCipherInt()) < 97){
+                            WithoutCrip = ((int)letras_criptografadas - getCipherInt() ) + 26;
                         }
                         else {
-                            WithoutCrip = (int)letras_criptografadas - Cipher_int;
+                            WithoutCrip = (int)letras_criptografadas - getCipherInt();
                         }
                     }
                     else{
-                        if(((int)letras_criptografadas - Cipher_int) < 65){
-                            WithoutCrip = ((int)letras_criptografadas - Cipher_int) + 26;
+                        if(((int)letras_criptografadas - getCipherInt()) < 65){
+                            WithoutCrip = ((int)letras_criptografadas - getCipherInt()) + 26;
                         }
                         else {
-                            WithoutCrip = (int)letras_criptografadas - Cipher_int;
+                            WithoutCrip = (int)letras_criptografadas - getCipherInt();
                         }
                     }
                 }
