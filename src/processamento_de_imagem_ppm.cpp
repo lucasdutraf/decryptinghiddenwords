@@ -10,7 +10,7 @@
 using namespace std;
 
 
-void ProcessamentoDeImagemPGM::setPathIn(string caminhoEntrada){
+/*void ProcessamentoDeImagemPGM::setPathIn(string caminhoEntrada){
     this->caminhoEntrada = caminhoEntrada;
 }
 string ProcessamentoDeImagemPGM::getPathIn(){
