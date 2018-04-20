@@ -10,8 +10,8 @@ int main (){
     UI inter;
     string Path;
     inter.RecebeImagem();
-    cin >> Path;
-    process1.setPathIn(Path);
+    /*cin >> Path;
+    process1.setPathIn(Path);*/
     process1.leitorImg();
     process1.UncripMsg();
 

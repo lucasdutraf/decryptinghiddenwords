@@ -13,7 +13,7 @@ obj/%.o: src/%.cpp
 clean: 
 	rm -rf obj/*
 	rm -rf bin/*
-
+	rm -r criptografia.txt
 run:
 	bin/main
 

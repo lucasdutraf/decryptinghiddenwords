@@ -69,16 +69,16 @@ string ProcessamentoDeImagem::getTonsImg(){
     return TonsImg;
 }
 
-void ProcessamentoDeImagemPGM::setPathIn(string caminhoEntrada){
+void ProcessamentoDeImagem::setPathIn(string caminhoEntrada){
     this->caminhoEntrada = caminhoEntrada;
 }
-string ProcessamentoDeImagemPGM::getPathIn(){
+string ProcessamentoDeImagem::getPathIn(){
     return caminhoEntrada;
 }
 
 // Outras funções -----------------------------------------------------------------------
 
-void ProcessamentoDeImagemPGM::leitorImg(){
+void ProcessamentoDeImagem::leitorImg(){
 }
 
 void UncripMsg(){

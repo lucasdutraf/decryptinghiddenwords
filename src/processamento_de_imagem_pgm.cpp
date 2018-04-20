@@ -11,10 +11,10 @@
 using namespace std;
 
 ProcessamentoDeImagemPGM::ProcessamentoDeImagemPGM(){
-    cout << "Classe criada" << endl;
+   // cout << "Classe criada" << endl;
 }
 ProcessamentoDeImagemPGM::~ProcessamentoDeImagemPGM(){
-    cout << "Término da classe Processamento de imagem PGM" << endl;
+   // cout << "Término da classe Processamento de imagem PGM" << endl;
 }
 int ProcessamentoDeImagemPGM::getCipherInt(){
     int Cipher_int = atoi(Cipher.c_str());
@@ -37,7 +37,7 @@ void ProcessamentoDeImagemPGM::leitorImg(){
 
 
     ifstream ImageIn;
-    ImageIn.open(getPathIn());
+    ImageIn.open("blocks.pgm");
 
     getline(ImageIn, id, '\n');
     ImageIn.get(comentario);
@@ -47,11 +47,6 @@ void ProcessamentoDeImagemPGM::leitorImg(){
     getline(ImageIn, LarguraImg, ' ');
     getline(ImageIn, AlturaImg, '\n');
     getline(ImageIn, TonsImg, '\n');
-
-
-    /*int CripStart_int = atoi(CripStart.c_str());
-    int CripLenght_int = atoi(CripLenght.c_str());
-    int Cipher_int = atoi(Cipher.c_str());*/
 
 
     if (ImageIn.is_open()){
@@ -64,7 +59,7 @@ void ProcessamentoDeImagemPGM::leitorImg(){
         ofstream Crip;
         Crip.open("criptografia.txt", ios::out);
 
-        for(int contador = getCripStartInt(); contador <= getCripStartInt() + getCripLenghtInt(); contador++){
+        for(int contador = getCripStartInt(); contador < getCripStartInt() + getCripLenghtInt(); contador++){
             Crip << imgVector[contador];
         }
         Crip.close();
@@ -79,16 +74,12 @@ void ProcessamentoDeImagemPGM::leitorImg(){
 
 void ProcessamentoDeImagemPGM::UncripMsg(){
     ifstream Crip;
-    int contador_crip;
+    int contador_crip = 0;
     int WithoutCrip = 0;
     char letras_criptografadas;
 
     Crip.open("criptografia.txt", ios::in);
     if(Crip.is_open()){
-
-        ofstream DesCrip;
-        DesCrip.open("mensagem.txt");
-        if(DesCrip.is_open()){
             while(contador_crip < getCripLenghtInt()){
                 Crip.get(letras_criptografadas);
 
@@ -117,39 +108,11 @@ void ProcessamentoDeImagemPGM::UncripMsg(){
                 WithoutCrip = 0;
                 contador_crip++;
             }
-        DesCrip.close();
-        }
-        else{
-            cout << "Falha no arquivo de abertura da mensagem não criptografada" << endl;
-        }
-        Crip.close();
+            cout << endl;
 
     }
     else{
         cout << "Arquivo de criptografia inacessível" << endl;
     }
+    Crip.close();
 }
-
-//ofstream -> saida sistema e entrada no arquivo
-/*  ofstream arquivo;
-    arquivo.open("caminho_do_arquivo.pgm");
-    arquivo.open("conteudo", ios::app); -> não sobrescreve conteúdo
-    arquivo << "O que se deseja armazenar no arquivo"; -> sobrescrevendo
-    arquivo.close(); ->limpa o espaço de memoria*/
-
-
-
-//ifstream -> saindo do arquivo e entrando no programa
-/*  ifstream arquivo;
-    string linha; -> mostar linha na tela
-    arquivo.open("caminho_do_arquivo.*");
-    if (arquivo.is_open()){
-        while(getline(arquivo, string)){
-            cout << linha << endl;
-        }
-        arquivo.close();
-    } -> verifica se o arquivo está aberto, retorna true se sim
-
-*/
-//fstream -> entrada ou saída
-//sempre fechar o arquivo
