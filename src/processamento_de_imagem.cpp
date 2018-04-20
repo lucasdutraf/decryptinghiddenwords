@@ -20,52 +20,52 @@ ProcessamentoDeImagem::~ProcessamentoDeImagem(){
 
 // Getters e Setters -------------------------------------------------------
 
-void ProcessamentoDeImagem::setId(string id);{
+void ProcessamentoDeImagem::setId(string id){
     this->id = id;
 }
-string ProcessamentoDeImagem::getId();{
+string ProcessamentoDeImagem::getId(){
     return id;
 }
 
-void ProcessamentoDeImagem::setCripStart(string CripStart);{
+void ProcessamentoDeImagem::setCripStart(string CripStart){
     this->CripStart = CripStart;
 }
-string ProcessamentoDeImagem::getCripStart();{
+string ProcessamentoDeImagem::getCripStart(){
     return CripStart;
 }
 
-void ProcessamentoDeImagem::setCripLenght(string CripLenght);{
+void ProcessamentoDeImagem::setCripLenght(string CripLenght){
     this->CripLenght = CripLenght;
 }
-string ProcessamentoDeImagem::getCripLenght();{
+string ProcessamentoDeImagem::getCripLenght(){
     return CripLenght;
 }
 
-void ProcessamentoDeImagem::setCipher(string Cipher);{
+void ProcessamentoDeImagem::setCipher(string Cipher){
     this->Cipher = Cipher;
 }
-string ProcessamentoDeImagem::getCipher();{
+string ProcessamentoDeImagem::getCipher(){
     return Cipher;
 }
 
-void ProcessamentoDeImagem::setLarguraImg(string LarguraImg);{
+void ProcessamentoDeImagem::setLarguraImg(string LarguraImg){
     this->LarguraImg = LarguraImg;
 }
-string ProcessamentoDeImagem::getLarguraImg();{
+string ProcessamentoDeImagem::getLarguraImg(){
     return LarguraImg;
 }
 
-void ProcessamentoDeImagem::setAlturaImg(string AlturaImg);{
+void ProcessamentoDeImagem::setAlturaImg(string AlturaImg){
     this->AlturaImg = AlturaImg;
 }
-string ProcessamentoDeImagem::getAlturaImg();{
+string ProcessamentoDeImagem::getAlturaImg(){
     return AlturaImg;
 }
 
-void ProcessamentoDeImagem::setTonsImg(string TonsImg);{
+void ProcessamentoDeImagem::setTonsImg(string TonsImg){
     this->TonsImg = TonsImg;
 }
-string ProcessamentoDeImagem::getTonsImg();{
+string ProcessamentoDeImagem::getTonsImg(){
     return TonsImg;
 }
 
