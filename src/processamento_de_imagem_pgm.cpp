@@ -11,7 +11,7 @@
 using namespace std;
 
 ProcessamentoDeImagemPGM::ProcessamentoDeImagemPGM(){
-    
+    cout << "Classe criada" << endl;
 }
 ProcessamentoDeImagemPGM::~ProcessamentoDeImagemPGM(){
     cout << "Término da classe Processamento de imagem PGM" << endl;
@@ -30,7 +30,6 @@ int ProcessamentoDeImagemPGM::getCripStartInt(){
 }
 
 void ProcessamentoDeImagemPGM::leitorImg(){
-    //this->ArmazenamentoImg = ArmazenamentoImg;
     
     char comentario;
     vector<char> imgVector;
