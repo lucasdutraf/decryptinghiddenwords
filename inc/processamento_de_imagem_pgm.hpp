@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <istream>
 #include <ctype.h>
+#include "processamento_de_imagem.hpp"
 
 
 using namespace std;

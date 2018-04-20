@@ -11,11 +11,7 @@
 using namespace std;
 
 ProcessamentoDeImagemPGM::ProcessamentoDeImagemPGM(){
-    setPathIn(" ");
     
-}
-ProcessamentoDeImagemPGM::ProcessamentoDeImagemPGM(setPathIn(string caminhoEntrada)){
-    caminhoEntrada = caminhoEntrada;
 }
 ProcessamentoDeImagemPGM::~ProcessamentoDeImagemPGM(){
     cout << "Término da classe Processamento de imagem PGM" << endl;
@@ -36,7 +32,7 @@ void ProcessamentoDeImagemPGM::leitorImg(){
 
     getline(ImageIn, id, '\n');
     ImageIn.get(comentario);
-    getline(ImageIn, getCripStart, ' ');
+    getline(ImageIn, CripStart, ' ');
     getline(ImageIn, CripLenght, ' ');
     getline(ImageIn, Cipher, '\n');
     getline(ImageIn, LarguraImg, ' ');
