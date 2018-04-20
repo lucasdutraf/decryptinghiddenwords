@@ -19,20 +19,11 @@ class ProcessamentoDeImagemPGM : public ProcessamentoDeImagem {
 
         void leitorImg();
 
-        int getCripStartInt(){
-            int CripStart_int = atoi(CripStart.c_str());
-            return CripStart_int;
-        }
+        int getCripStartInt();
 
-        int getCripLenghtInt(){
-            int CripLenght_int = atoi(CripLenght.c_str());
-            return CripLenght_int;
-        }
+        int getCripLenghtInt();
 
-        int getCipherInt(){
-            int Cipher_int = atoi(Cipher.c_str());
-            return Cipher_int;
-        }
+        int getCipherInt();
 
         void UncripMsg();
 

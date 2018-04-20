@@ -16,12 +16,23 @@ ProcessamentoDeImagemPGM::ProcessamentoDeImagemPGM(){
 ProcessamentoDeImagemPGM::~ProcessamentoDeImagemPGM(){
     cout << "Término da classe Processamento de imagem PGM" << endl;
 }
+int ProcessamentoDeImagemPGM::getCipherInt(){
+    int Cipher_int = atoi(Cipher.c_str());
+    return Cipher_int;
+}
+int ProcessamentoDeImagemPGM::getCripLenghtInt(){
+    int CripLenght_int = atoi(CripLenght.c_str());
+    return CripLenght_int;
+}
+int ProcessamentoDeImagemPGM::getCripStartInt(){
+    int CripStart_int = atoi(CripStart.c_str());
+    return CripStart_int;
+}
 
 void ProcessamentoDeImagemPGM::leitorImg(){
     //this->ArmazenamentoImg = ArmazenamentoImg;
     
     char comentario;
-    int contador;
     vector<char> imgVector;
     char conteudo;
 
@@ -54,9 +65,10 @@ void ProcessamentoDeImagemPGM::leitorImg(){
         ofstream Crip;
         Crip.open("criptografia.txt", ios::out);
 
-        for(contador = getCripStartInt(); contador <= getCripStartInt() + getCripLenghtInt(); contador++){
+        for(int contador = getCripStartInt(); contador <= getCripStartInt() + getCripLenghtInt(); contador++){
             Crip << imgVector[contador];
         }
+        Crip.close();
     }
 
     else{
@@ -107,16 +119,16 @@ void ProcessamentoDeImagemPGM::UncripMsg(){
                 contador_crip++;
             }
         DesCrip.close();
-
         }
         else{
             cout << "Falha no arquivo de abertura da mensagem não criptografada" << endl;
         }
+        Crip.close();
+
     }
     else{
         cout << "Arquivo de criptografia inacessível" << endl;
     }
-    Crip.close();
 }
 
 //ofstream -> saida sistema e entrada no arquivo
