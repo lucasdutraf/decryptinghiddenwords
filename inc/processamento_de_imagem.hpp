@@ -24,39 +24,39 @@ class ProcessamentoDeImagem {
         //Contrutores e destrutores ------------------------------------------------
 
         ProcessamentoDeImagem();
-        ~ProcessamentoDeImagem();
+        virtual ~ProcessamentoDeImagem() = 0;
 
         // Getters e Setters -------------------------------------------------------
 
-        void setId(string id);
-        string getId();
+        virtual void setId(string id);
+        virtual string getId();
 
-        void setCripStart(string CripStart);
-        string getCripStart();
+        virtual void setCripStart(string CripStart);
+        virtual string getCripStart();
 
-        void setCripLenght(string CripLenght);
-        string getCripLenght();
+        virtual void setCripLenght(string CripLenght);
+        virtual string getCripLenght();
 
-        void setCipher(string Cipher);
-        string getCipher();
+        virtual void setCipher(string Cipher);
+        virtual string getCipher();
 
-        void setLarguraImg(string LarguraImg);
-        string getLarguraImg();
+        virtual void setLarguraImg(string LarguraImg);
+        virtual string getLarguraImg();
 
-        void setAlturaImg(string AlturaImg);
-        string getAlturaImg();
+        virtual void setAlturaImg(string AlturaImg);
+        virtual string getAlturaImg();
 
-        void setTonsImg(string TonsImg);
-        string getTonsImg();
+        virtual void setTonsImg(string TonsImg);
+        virtual string getTonsImg();
     
-        void setPathIn(string caminhoEntrada);
-        string getPathIn();
+        virtual void setPathIn(string caminhoEntrada);
+        virtual string getPathIn();
 
         // Outras funções -----------------------------------------------------------------------
 
-        void leitorImg();
+        virtual void leitorImg();
 
-        void UncripMsg();
+        virtual void UncripMsg();
 
 
 };

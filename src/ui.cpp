@@ -14,8 +14,8 @@ void UI::InterfaceInicial(){
 }
 
 void UI::PedeTipoDeImagem(){
-    cout << "Por favor, digite o tipo de imagem desejado para achar e descriptografar a mensagem escondida : \n\n\n" << endl;
-    cout << "Digite 1 para .pgm " << "ou" << " digite 2 para .ppm\n\n\n" << endl;
+    cout << "Por favor, digite o tipo de imagem desejado para achar e descriptografar a mensagem escondida : " << endl;
+    cout << "(Digite 1 para .pgm " << "ou" << " digite 2 para .ppm)\n\n\n" << endl;
 }
 
 void UI::RecebeImagem(){
@@ -27,6 +27,6 @@ void UI::MostraCriptografia(){
 }
 
 void UI::Despedida(){
-    cout << "\n\nFim do programa, muito obrigado por usá-lo" << endl;
-    cout << "\nFeito por: Lucas Dutra Ferreira do Nascimento" << endl;
+    cout << "\n\nFIM DO PROGRAMA, MUITO OBRIGADO POR USÁ-LO" << endl;
+    cout << "\n\n\nFeito por: Lucas Dutra Ferreira do Nascimento\n\n\n" << endl;
 }
