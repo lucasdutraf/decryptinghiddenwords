@@ -10,7 +10,7 @@ UI::~UI(){
 }
 
 void UI::InterfaceInicial(){
-    cout << "\n\n\nBem-vindo ao leitor de imagens e descriptografador de mensagens escondidas em arquivos .ppm e .pgm\n\n\n" << endl;
+    cout << "\n\n\nBEM-VINDO AO DESCRIPTOGRAFADOR DE MENSAGENS ESCONDIDAS EM ARQUIVOS .PGM E .PPM\n\n\n" << endl;
 }
 
 void UI::PedeTipoDeImagem(){
