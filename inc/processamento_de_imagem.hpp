@@ -24,7 +24,7 @@ class ProcessamentoDeImagem {
         //Contrutores e destrutores ------------------------------------------------
 
         ProcessamentoDeImagem();
-        virtual ~ProcessamentoDeImagem() = 0;
+        virtual ~ProcessamentoDeImagem();
 
         // Getters e Setters -------------------------------------------------------
 
@@ -50,7 +50,7 @@ class ProcessamentoDeImagem {
         virtual string getTonsImg();
     
         virtual void setPathIn(string caminhoEntrada);
-        virtual string getPathIn();
+        string getPathIn();
 
         // Outras funções -----------------------------------------------------------------------
 

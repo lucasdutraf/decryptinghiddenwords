@@ -81,6 +81,6 @@ string ProcessamentoDeImagem::getPathIn(){
 void ProcessamentoDeImagem::leitorImg(){
 }
 
-void UncripMsg(){
+void ProcessamentoDeImagem::UncripMsg(){
     
 }
