@@ -24,9 +24,11 @@ void UI::RecebeImagem(){
 
 void UI::MostraCriptografia(){
     cout << "A mensagem escondida na sua imagem é: \n\n";
+    cout << "----------------------MENSAGEM DESCRIPTOGRAFADA----------------------\n\n";
 }
 
 void UI::Despedida(){
+    cout << "----------------------MENSAGEM DESCRIPTOGRAFADA----------------------\n\n";
     cout << "\n\nFIM DO PROGRAMA, MUITO OBRIGADO POR USÁ-LO" << endl;
     cout << "\n\n\nFeito por: Lucas Dutra Ferreira do Nascimento\n\n\n" << endl;
 }
