@@ -9,11 +9,11 @@ int main (int argc, char ** argv){
     ProcessamentoDeImagemPGM * process1 = new ProcessamentoDeImagemPGM();
     UI * inter = new UI();
     string Path;
-    int seletor_main;
+    //int seletor_main;
     inter->InterfaceInicial();
     inter->PedeTipoDeImagem();
-    cin >> seletor_main;
-    if (seletor_main == 1){
+    //cin >> seletor_main;
+    //if (seletor_main == 1){
         inter->RecebeImagem();
         cin >> Path;
         process1->setPathIn(Path);
@@ -21,13 +21,13 @@ int main (int argc, char ** argv){
         inter->MostraCriptografia();
         process1->UncripMsg();
 
-    }
-    else if (seletor_main == 2){
+    //}
+    //else if (seletor_main == 2){
 
-    }
-    else {
+    //}
+    //else {
         //break;
-    }
+    //}
     inter->Despedida();
     
     delete inter;
