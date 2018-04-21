@@ -9,9 +9,11 @@ int main (int argc, char ** argv){
     ProcessamentoDeImagemPGM process1;
     UI inter;
     string Path;
+    int seletor;
+    
     inter.RecebeImagem();
-    /*cin >> Path;
-    process1.setPathIn(Path);*/
+    cin >> Path;
+    process1.setPathIn(Path);
     process1.leitorImg();
     process1.UncripMsg();
 

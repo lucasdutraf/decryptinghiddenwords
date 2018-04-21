@@ -37,7 +37,7 @@ void ProcessamentoDeImagemPGM::leitorImg(){
 
 
     ifstream ImageIn;
-    ImageIn.open("blocks.pgm");
+    ImageIn.open(getPathIn());
 
     getline(ImageIn, id, '\n');
     ImageIn.get(comentario);
