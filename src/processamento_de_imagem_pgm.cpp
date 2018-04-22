@@ -7,14 +7,16 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string>
+#include <sstream>
+
 
 using namespace std;
 
 ProcessamentoDeImagemPGM::ProcessamentoDeImagemPGM(){
-   // cout << "Classe criada" << endl;
+   
 }
 ProcessamentoDeImagemPGM::~ProcessamentoDeImagemPGM(){
-   // cout << "Término da classe Processamento de imagem PGM" << endl;
+   
 }
 int ProcessamentoDeImagemPGM::getCipherInt(){
     int Cipher_int = atoi(Cipher.c_str());
