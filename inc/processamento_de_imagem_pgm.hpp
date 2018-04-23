@@ -19,12 +19,6 @@ class ProcessamentoDeImagemPGM : public ProcessamentoDeImagem {
 
         void leitorImg();
 
-        int getCripStartInt();
-
-        int getCripLenghtInt();
-
-        int getCipherInt();
-
         void UncripMsg();
 
 

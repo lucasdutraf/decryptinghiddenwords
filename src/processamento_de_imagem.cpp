@@ -84,3 +84,15 @@ void ProcessamentoDeImagem::leitorImg(){
 void ProcessamentoDeImagem::UncripMsg(){
     
 }
+int ProcessamentoDeImagem::getCipherInt(){
+    int Cipher_int = atoi(Cipher.c_str());
+    return Cipher_int;
+}
+int ProcessamentoDeImagem::getCripLenghtInt(){
+    int CripLenght_int = atoi(CripLenght.c_str());
+    return CripLenght_int;
+}
+int ProcessamentoDeImagem::getCripStartInt(){
+    int CripStart_int = atoi(CripStart.c_str());
+    return CripStart_int;
+}

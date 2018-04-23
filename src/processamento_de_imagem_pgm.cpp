@@ -18,18 +18,7 @@ ProcessamentoDeImagemPGM::ProcessamentoDeImagemPGM(){
 ProcessamentoDeImagemPGM::~ProcessamentoDeImagemPGM(){
    
 }
-int ProcessamentoDeImagemPGM::getCipherInt(){
-    int Cipher_int = atoi(Cipher.c_str());
-    return Cipher_int;
-}
-int ProcessamentoDeImagemPGM::getCripLenghtInt(){
-    int CripLenght_int = atoi(CripLenght.c_str());
-    return CripLenght_int;
-}
-int ProcessamentoDeImagemPGM::getCripStartInt(){
-    int CripStart_int = atoi(CripStart.c_str());
-    return CripStart_int;
-}
+
 
 void ProcessamentoDeImagemPGM::leitorImg(){
     

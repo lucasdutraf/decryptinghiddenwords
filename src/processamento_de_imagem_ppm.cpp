@@ -12,10 +12,10 @@
 
 using namespace std;
 
-ProcessamentoDeImagemPPM::ProcessamentoDeImagemPGM(){
+ProcessamentoDeImagemPPM::ProcessamentoDeImagemPPM(){
 
 }
-ProcessamentoDeImagemPPM::~ProcessamentoDeImagemPGM(){
+ProcessamentoDeImagemPPM::~ProcessamentoDeImagemPPM(){
 
 }
 
@@ -35,6 +35,8 @@ void ProcessamentoDeImagemPPM::leitorImg(){
     //ImageIn.open(getPathIn(), ios::in)
 
     if (ImageIn.is_open()){
+
+        char comentario;
 
         getline(ImageIn, id, '\n');
         ImageIn.get(comentario);

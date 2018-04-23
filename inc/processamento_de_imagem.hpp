@@ -58,6 +58,12 @@ class ProcessamentoDeImagem {
 
         virtual void UncripMsg();
 
+        virtual int getCripStartInt();
+
+        virtual int getCripLenghtInt();
+
+        virtual int getCipherInt();
+
 
 };
 #endif
