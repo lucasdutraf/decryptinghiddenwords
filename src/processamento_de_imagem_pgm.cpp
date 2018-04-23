@@ -61,8 +61,13 @@ void ProcessamentoDeImagemPGM::leitorImg(){
         ofstream Crip;
         Crip.open("criptografia.txt", ios::out);
 
-        for(int contador = getCripStartInt(); contador < getCripStartInt() + getCripLenghtInt(); contador++){
-            Crip << imgVector[contador];
+        if (Crip.is_open()){
+            for(int contador = getCripStartInt(); contador < getCripStartInt() +    getCripLenghtInt(); contador++){
+                Crip << imgVector[contador];
+            }
+        }
+        else{
+            cout << "Não foi possivel abrir o arquivo de criptografia" << endl;
         }
         Crip.close();
     }
@@ -70,7 +75,6 @@ void ProcessamentoDeImagemPGM::leitorImg(){
     else{
         cout << "Não foi possível abrir o arquivo" << endl;
     }
-
     ImageIn.close();
 }
 

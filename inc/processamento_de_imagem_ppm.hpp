@@ -14,14 +14,21 @@
 using namespace std;
 
 class ProcessamentoDeImagemPPM : public ProcessamentoDeImagem{    
+    
+    protected:
+
+        vector<unsigned char> r;
+        vector<unsigned char> g;
+        vector<unsigned char> b;
+        unsigned int dimensions;
+    
     public:
     
         ProcessamentoDeImagemPPM();
-        ProcessamentoDeImagemPPM(getPathIn());
         ~ProcessamentoDeImagemPPM();
+
+        unsigned int getAlturaUnsInt();
+        unsigned int getLarguraUnsInt();
     
-        void leitorImg(string ArmazenamentoImg);
-
-
 };
 #endif
