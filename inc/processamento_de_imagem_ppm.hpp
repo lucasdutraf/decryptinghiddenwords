@@ -29,6 +29,9 @@ class ProcessamentoDeImagemPPM : public ProcessamentoDeImagem{
 
         unsigned int getAlturaUnsInt();
         unsigned int getLarguraUnsInt();
+        
+        void leitorImg();
+        void UncripMsg();
     
 };
 #endif
