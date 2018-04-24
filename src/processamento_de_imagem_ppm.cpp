@@ -32,7 +32,7 @@ unsigned int ProcessamentoDeImagemPPM::getLarguraUnsInt(){
 void ProcessamentoDeImagemPPM::leitorImg(){
 
     ifstream ImageIn;
-    ImageIn.open(getPathIn(), ios::in)
+    ImageIn.open(getPathIn(), ios::in);
 
     if (ImageIn.is_open()){
 
@@ -87,9 +87,8 @@ void ProcessamentoDeImagemPPM::leitorImg(){
     else {
         cout << "Não foi possível abrir a imagem" << endl;
     }
-    ImageIn.close();
-}
+    ImageIn.close();}
 
-void ProcessamentoDeImagemPPM::Uncrip(){
+void ProcessamentoDeImagemPPM::UncripMsg(){
 
 }
