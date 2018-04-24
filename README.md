@@ -2,11 +2,11 @@
 
 ## **Como executar o programa**
 
-- Primeiramente é necessário um ambiente Unix com o compilador g++ instalado.
+- Primeiramente é necessário um ambiente Unix com o compilador g++ instalado e git.
 
-- O segundo passo é acessar a pasta.
+- O segundo passo é acessar uma pasta pasta de sua preferência e digitar o seguinte comando 'git clone (https://gitlab.com/lucasdutraf/ep1.git)'.
 
-- O terceiro passo é executar o comando 'make'.
+- O terceiro passo é acessar a pasta **ep1** através do comando 'cd ep1' e executar o comando 'make'.
 
 - O quarto passo é executar o comando 'make run' e seguir os comandos exibidos na tela.
 
