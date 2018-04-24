@@ -6,7 +6,7 @@
 
 int main (int argc, char ** argv){
 
-    ProcessamentoDeImagemPGM * process1 = new ProcessamentoDeImagemPGM();
+    /*ProcessamentoDeImagemPGM * process1 = new ProcessamentoDeImagemPGM();
     UI * inter = new UI();
     string Path;
     //int seletor_main;
@@ -31,7 +31,10 @@ int main (int argc, char ** argv){
     inter->Despedida();
     
     delete inter;
-    delete process1;
+    delete process1;*/
+
+    ProcessamentoDeImagemPPM * process2 = new ProcessamentoDeImagemPPM();
+    process2->leitorImg();
 
     return 0;
 }

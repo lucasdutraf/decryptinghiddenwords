@@ -31,12 +31,14 @@ unsigned int ProcessamentoDeImagemPPM::getLarguraUnsInt(){
 
 void ProcessamentoDeImagemPPM::leitorImg(){
 
-    ifstream ImageIn(getPathIn().c_str(), ios::in);
-    //ImageIn.open(getPathIn(), ios::in)
+    ifstream ImageIn;
+    ImageIn.open(getPathIn(), ios::in)
 
     if (ImageIn.is_open()){
 
         char comentario;
+        char conteudo;
+        vector<unsigned int> imgVector;
 
         getline(ImageIn, id, '\n');
         ImageIn.get(comentario);
@@ -47,7 +49,11 @@ void ProcessamentoDeImagemPPM::leitorImg(){
         getline(ImageIn, AlturaImg, '\n');
         getline(ImageIn, TonsImg, '\n');
 
-        dimensions = getAlturaUnsInt() * getLarguraUnsInt();
+        /*dimensions = getAlturaUnsInt() * getLarguraUnsInt();
+
+        r.reserve(dimensions);
+        g.reserve(dimensions);
+        b.reserve(dimensions);
 
         char auxiliar;
 
@@ -58,16 +64,23 @@ void ProcessamentoDeImagemPPM::leitorImg(){
             g[contador] = (unsigned char) auxiliar;
             ImageIn.read(&auxiliar, 1);
             b[contador] = (unsigned char) auxiliar;
+        }*/
+
+        while(!ImageIn.eof()){
+            ImageIn.get(conteudo);
+            imgVector.push_back((int)conteudo);
         }
 
         ofstream Crip;
         Crip.open("criptografia.txt", ios::out);
 
         if(Crip.is_open()){
-            
+            for(int contador = getCripStartInt(); contador < getCripStartInt() + (getCripLenghtInt()*3); contador++){
+                Crip << imgVector[contador];
+            }            
         }
         else {
-
+            cout << "Não foi possível abrir o arquivo de criptografia" << endl;
         }
         Crip.close();
     }
