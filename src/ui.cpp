@@ -15,7 +15,7 @@ void UI::InterfaceInicial(){
 
 
 void UI::RecebeImagem(){
-    cout << "Digite o caminho da sua imagem\n" << endl;
+    cout << "Digite o caminho da sua imagem, desde a raíz\n" << endl;
 }
 
 void UI::MostraCriptografia(){
