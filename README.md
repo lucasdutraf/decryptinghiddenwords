@@ -4,7 +4,7 @@
 
 - Primeiramente é necessário um ambiente Unix com o compilador g++ instalado e git.
 
-- O segundo passo é acessar uma pasta pasta de sua preferência e digitar o seguinte comando 'git clone (https://gitlab.com/lucasdutraf/ep1.git)'.
+- O segundo passo é acessar uma pasta pasta de sua preferência e digitar o seguinte comando 'git clone https://gitlab.com/lucasdutraf/ep1.git'.
 
 - O terceiro passo é acessar a pasta **ep1** através do comando 'cd ep1' e executar o comando 'make'.
 
