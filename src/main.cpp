@@ -3,38 +3,27 @@
 #include "processamento_de_imagem_ppm.hpp"
 #include "ui.hpp"
 #include <iostream>
+#include <string>
 
 int main (int argc, char ** argv){
 
-    /*ProcessamentoDeImagemPGM * process1 = new ProcessamentoDeImagemPGM();
+    ProcessamentoDeImagemPGM * process1 = new ProcessamentoDeImagemPGM();
     UI * inter = new UI();
-    string Path;
-    //int seletor_main;
     inter->InterfaceInicial();
-    inter->PedeTipoDeImagem();
-    //cin >> seletor_main;
-    //if (seletor_main == 1){
-        inter->RecebeImagem();
-        cin >> Path;
-        process1->setPathIn(Path);
-        process1->leitorImg();
-        inter->MostraCriptografia();
-        process1->UncripMsg();
-
-    //}
-    //else if (seletor_main == 2){
-
-    //}
-    //else {
-        //break;
-    //}
+    string Path;
+    inter->RecebeImagem();
+    cin >> Path;
+    process1->setPathIn(Path);
+    process1->leitorImg();
+    inter->MostraCriptografia();
+    process1->UncripMsg();
     inter->Despedida();
-    
-    delete inter;
-    delete process1;*/
+    inter->Sinceridade();
 
-    ProcessamentoDeImagemPPM * process2 = new ProcessamentoDeImagemPPM();
-    process2->leitorImg();
+
+    delete inter;
+    delete process1;
+
 
     return 0;
 }

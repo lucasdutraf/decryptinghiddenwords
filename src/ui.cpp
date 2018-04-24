@@ -10,13 +10,9 @@ UI::~UI(){
 }
 
 void UI::InterfaceInicial(){
-    cout << "\n\n\nBEM-VINDO AO DESCRIPTOGRAFADOR DE MENSAGENS ESCONDIDAS EM ARQUIVOS .PGM E .PPM\n\n\n" << endl;
+    cout << "\n\n\nBEM-VINDO AO DESCRIPTOGRAFADOR DE MENSAGENS ESCONDIDAS EM ARQUIVOS .PGM \n\n\n" << endl;
 }
 
-void UI::PedeTipoDeImagem(){
-    cout << "Por favor, digite o tipo de imagem desejado para achar e descriptografar a mensagem escondida : " << endl;
-    cout << "(Digite 1 para .pgm " << "ou" << " digite 2 para .ppm)\n\n\n" << endl;
-}
 
 void UI::RecebeImagem(){
     cout << "Digite o caminho da sua imagem\n" << endl;
@@ -31,4 +27,8 @@ void UI::Despedida(){
     cout << "\n----------------------MENSAGEM DESCRIPTOGRAFADA----------------------\n\n";
     cout << "\n\nFIM DO PROGRAMA, MUITO OBRIGADO POR USÁ-LO" << endl;
     cout << "\n\n\nFeito por: Lucas Dutra Ferreira do Nascimento\n\n\n" << endl;
+}
+
+void UI::Sinceridade(){
+    cout << "\n\nDevido a problemas técnicos as imagens .ppm não puderam ser descriptografadas apenas lidas :(\n\n" << endl;
 }

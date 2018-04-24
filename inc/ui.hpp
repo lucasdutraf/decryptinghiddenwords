@@ -7,6 +7,11 @@
 using namespace std;
 
 class UI {
+
+    private:
+
+        int tipoDeImg;
+        char repeticao;
     
     public:
         UI();
@@ -14,12 +19,13 @@ class UI {
 
         void InterfaceInicial();
 
-        void PedeTipoDeImagem();
-
         void RecebeImagem();
 
         void MostraCriptografia();
 
         void Despedida();
+
+        void Sinceridade();
+
 };
 #endif
